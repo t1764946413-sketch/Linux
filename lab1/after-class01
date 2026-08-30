@@ -1,0 +1,12 @@
+ #!/bin/bash
+  if [ -z "$1" ]; then
+      echo "用法: $0 文件名"
+      exit 1
+  fi
+
+  if [ -f "$1" ]; then
+      echo "文件 $1 存在"
+  else
+      echo "文件 $1 不存在"
+  fi
+
