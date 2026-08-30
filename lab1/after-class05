@@ -1,0 +1,7 @@
+#!/bin/bash
+  set -x
+  name="world"
+  echo "hello $name"
+  count=$((1+2))
+  echo $count
+
