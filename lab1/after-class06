@@ -1,0 +1,18 @@
+#!/bin/bash
+  if [ $# -eq 0 ]; then
+      echo "用法: $0 测试命令...  (例如: $0 cargo test my_test)"
+      exit 1
+  fi
+
+  count=0
+  while true; do
+      count=$((count+1))
+      if "$@" > /tmp/flaky.log 2>&1; then
+          echo "第 $count 次:通过"
+      else
+          echo "=== 第 $count 次运行失败,复现成功 ==="
+          cat /tmp/flaky.log
+          exit 1
+      fi
+  done
+
