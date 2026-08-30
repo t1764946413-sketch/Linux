@@ -1,0 +1,7 @@
+#!/bin/bash
+  # 用法: $0 [目录],默认当前目录
+  # 找出所有 .sh 文件并统计行数;-print0 / -0 正确处理带空格的文件名
+  # xargs -r:没有找到文件时不执行 wc(避免 wc 空等输入)
+  dir="${1:-.}"
+  find "$dir" -name "*.sh" -print0 | xargs -0 -r wc -l
+
