@@ -1,0 +1,14 @@
+#!/bin/bash
+  # 分别重定向:stdout 到 out,stderr 到 err
+  ls /nonexistent /tmp > /tmp/q7_out.txt 2> /tmp/q7_err.txt
+
+  # 合并重定向:都进同一个文件
+  ls /nonexistent /tmp > /tmp/q7_both.txt 2>&1
+
+  echo "--- stdout 的内容 ---"
+  cat /tmp/q7_out.txt
+  echo "--- stderr 的内容 ---"
+  cat /tmp/q7_err.txt
+  echo "--- 合并后的内容 ---"
+  cat /tmp/q7_both.txt
+
