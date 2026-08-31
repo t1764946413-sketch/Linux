@@ -1,0 +1,34 @@
+\documentclass{article}
+  \usepackage{amsmath}
+  \begin{document}
+  \title{Tool Report}
+  \author{Tian Zhengye -- 25020007114}
+  \maketitle
+
+  \section{Result}
+
+  The average latency of requests is defined by equation \eqref{eq:latency}:
+
+  \begin{equation}
+      \bar{L} = \frac{1}{n} \sum_{i=1}^{n} L_i
+      \label{eq:latency}
+  \end{equation}
+
+  where $L_i$ is the latency of the $i$-th request and $n$ is the total number
+  of requests. The result of this experiment is shown in Table \ref{tab:tools}.
+
+  \begin{table}[htbp]
+      \centering
+      \begin{tabular}{|c|c|}
+          \hline
+          Tool & Average latency (ms) \\
+          \hline
+          analyze.sh & 193.75 \\
+          \hline
+      \end{tabular}
+      \caption{Comparison of average latency from two methods}
+      \label{tab:tools}
+  \end{table}
+
+\end{document}
+
