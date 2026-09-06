@@ -4,3 +4,6 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .venv/
+
+# q08 生成的词表(可用 generate_words.py 重现)
+week2/q08/words.txt
