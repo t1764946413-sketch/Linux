@@ -1,0 +1,6 @@
+ - 核心提示：让 greetlab 在 --name 只含空白字符时以退出码 2
+  结束、不输出问候；只改实现不动测试，保持 argparse 结构。
+  - 智能体改动：cli.py 新增 2 行空白名检查——a.name.strip() 为空时调用
+  p.error()，argparse 报错通道退出码为 2。
+  - 人工验证：先行测试 1 failed（DID NOT RAISE SystemExit）；审查 diff 仅 +2
+  行、无无关修改；重跑 pytest 1 passed。
